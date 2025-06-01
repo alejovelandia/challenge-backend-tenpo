@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "8caf353e-1f59-4655-8802-395a615efcbe",
+		"name": "Tenpo Challenge Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5700993"
+	},
+	"item": [
+		{
+			"name": "MathOperation",
+			"item": [
+				{
+					"name": "Addition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/math-operation/addition?num1=2&num2=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"math-operation",
+								"addition"
+							],
+							"query": [
+								{
+									"key": "num1",
+									"value": "2"
+								},
+								{
+									"key": "num2",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TransactionLog",
+			"item": [
+				{
+					"name": "History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/transaction/history?offset=0&limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"transaction",
+								"history"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApiDocumentation",
+			"item": [
+				{
+					"name": "Api docs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api-docs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Swagger UI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/swagger-ui/index.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"swagger-ui",
+								"index.html"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ExternalApiMock",
+			"item": [
+				{
+					"name": "Get Percentage Success",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1080/getpercentage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1080",
+							"path": [
+								"getpercentage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Percentage Error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:1080/getpercentage/error",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1080",
+							"path": [
+								"getpercentage",
+								"error"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

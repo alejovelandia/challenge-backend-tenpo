@@ -1,0 +1,28 @@
+[
+  {
+    "httpRequest": {
+      "path": "/getpercentage",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "status": "Success",
+        "percentage": 0.6
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/getpercentage/error",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 500,
+      "body": {
+        "code":   "INTERNAL_SERVER_ERROR",
+        "message": "Error occurred while processing the request"
+      }
+    }
+  }
+]

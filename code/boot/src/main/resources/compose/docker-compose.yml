@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: postgres-db
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_PASSWORD=db_pass
+      - POSTGRES_USER=db_user
+      - POSTGRES_DB=postgres
+    networks:
+      - app-network
+
+  mockServer:
+    container_name: mock-server
+    image: mockserver/mockserver:5.14.0
+    ports:
+      - 1080:1080
+    environment:
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/initializerJson.json
+    volumes:
+      - ./mockserver:/config
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
