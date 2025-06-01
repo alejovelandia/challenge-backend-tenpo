@@ -1,0 +1,11 @@
+spring:
+  cache:
+    cache-names: percentageApiCache
+    caffeine:
+      spec: maximumSize=10,expireAfterWrite=5s
+
+properties:
+  external-api:
+    percentage-api:
+      host: http://localhost:1080
+      path: /getpercentage
